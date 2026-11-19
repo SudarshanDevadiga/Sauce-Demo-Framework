@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <File
+            name="FileLogger"
+            fileName="logs/automation.log">
+            <PatternLayout
+                pattern="%d %p %c [%t] %m%n"/>
+        </File>
+        <Console
+            name="Console">
+            <PatternLayout
+                pattern="%d %p %c - %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="FileLogger"/>
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
